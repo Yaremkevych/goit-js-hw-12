@@ -13,10 +13,10 @@ import {
   hideLoadMoreButton,
 } from './js/render-functions';
 
-const showErrorToast = message => {
+const showErrorToast = error => {
   iziToast.show({
     title: '⚠️',
-    message,
+    error,
     messageColor: 'white',
     messageSize: '16px',
     backgroundColor: 'red',
