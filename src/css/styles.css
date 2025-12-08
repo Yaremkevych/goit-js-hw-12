@@ -7,12 +7,108 @@
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+button {
+  cursor: pointer;
+  color: #fff;
+  width: 91px;
+  height: 40px;
+  border: 1px solid #4e75ff;
+  background-color: #4e75ff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #6c8cff;
+}
+
+input {
+  width: 272px;
+  height: 40px;
+  padding: 8px 10px;
+  border: 1px solid #bfc3c8;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1128px;
+  margin: 0 auto;
+}
+.gallery-item {
+  box-sizing: border-box;
+  border: 1px solid #000;
+  width: calc((100% - 48px) / 3);
+}
+.gallery-image {
+  width: 360px;
+  height: 200px;
+}
+.image-statistic {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding-top: 4px;
+  background-color: #fff;
+}
+.statistic-name {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.statistic-value {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.loader {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: block;
+  margin: 48px auto;
+  position: relative;
+  background: #fff;
+  box-shadow: -24px 0 #fff, 24px 0 #fff;
+  box-sizing: border-box;
+  animation: shadowPulse 2s linear infinite;
+}
+
+@keyframes shadowPulse {
+  33% {
+    background: #fff;
+    box-shadow: -24px 0 #4e75ff, 24px 0 #fff;
+  }
+  66% {
+    background: #4e75ff;
+    box-shadow: -24px 0 #fff, 24px 0 #fff;
+  }
+  100% {
+    background: #fff;
+    box-shadow: -24px 0 #fff, 24px 0 #4e75ff;
+  }
+}
